@@ -11,7 +11,7 @@ nav {
 }
 
 .navitem {
-    font-size: 2.3vw;
+    font-size: 2.1vw;
 }
 
 
@@ -22,7 +22,7 @@ nav {
 
 .logo {
     margin-left: 10px;
-    max-width: 15vh;
+    max-width: 13vh;
 
 }
 
@@ -32,14 +32,13 @@ nav {
     margin: 0 auto;
 }
 
-#collapse{
-    display: none;
-}
-
 .container {
     max-width: 80vw;
     margin-left: 10vw;
     margin-right: 10vw;
+}
+.content {
+    min-height: 60vh;
 }
 
 #sticky-navbar {

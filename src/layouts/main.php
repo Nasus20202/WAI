@@ -31,8 +31,10 @@
             echo '<a href="'. $routeName .'" class="navitem' . ($path == $routeName ? ' currentNav' : '') . '">' . $routes[$routeName][1] . '</a>';
           }
         }?>
-              </nav>
-        <?php include $content ?>
+        </nav>
+        <main class="content">
+          <?php include $content ?>
+      </main>
     </div>
   </body>
 </html>

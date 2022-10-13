@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
 :root {
+    --white-0: #F8FDEF;
     --white-1: #E8EDDF;
     --white-2: #CFDBD5;
     --yellow:  #F5CB5C;
@@ -20,9 +21,12 @@ nav {
     margin-bottom: 10px;
 }
 
-header {
-    background-color: #F8FDEF;
-    padding-top: 10px;
+nav:hover {
+    transform: scale(1.01);
+}
+
+nav.pinned {
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.32);
 }
 
 .navitem {
@@ -31,18 +35,27 @@ header {
     text-align: center;
     background-color: var(--white-1);
     transition-duration: 0.5s;
-    transition-property: background-color, color, font-weight, font-size;
     border-radius: 5px;
-}
-
-.currentNav {
-    background-color: var(--black-1);
-    color: var(--yellow);
 }
 
 .navitem:hover {
     background-color: var(--yellow);
     color: inherit;
+    box-shadow: 0 0 15px 0 rgba(0,0,0,0.2);
+}
+
+header {
+    transition-duration: 1s;
+    background-color: var(--white-0);
+    padding-top: 10px;
+}
+header:hover {
+    transform: scale(1.01);
+}
+
+.currentNav {
+    background-color: var(--black-1);
+    color: var(--yellow);
 }
 
 a {

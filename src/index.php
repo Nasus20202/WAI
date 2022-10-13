@@ -7,6 +7,7 @@
     if(array_key_exists($path, $routes)){
         include $routes[$path][0];
     } else {
+        http_response_code(404);
         include $notFoundPath;
     }
 ?>
