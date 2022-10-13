@@ -1,0 +1,31 @@
+body {
+    scroll-behavior: smooth;
+}
+
+.container {
+    width: 80vw;
+    margin-left: 10vw;
+    margin-right: 10vh;
+}
+
+@media only screen and (max-width: 1000px) {
+    body {
+      background-color: lightcoral;
+    }
+    .container {
+        width: 95vw;
+        margin-left: 2.5vw;
+        margin-right: 2.5vw;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+      background-color: lightblue;
+    }
+    .container {
+        width: 97vw;
+        margin-left: 1vw;
+        margin-right: 2vw;
+    }
+}
