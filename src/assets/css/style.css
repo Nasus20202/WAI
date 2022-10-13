@@ -19,6 +19,7 @@ nav {
     border-radius: 0 0 5px 5px;
     background-color: var(--white-1);
     margin-bottom: 10px;
+    z-index: 1;
 }
 
 nav.pinned {
