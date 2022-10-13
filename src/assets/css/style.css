@@ -14,23 +14,35 @@ body {
 }
 
 nav {
-    /*background-color: var(--black-1);*/
     padding: 1em;
-    border-radius: 5px;
+    border-radius: 0 0 5px 5px;
     background-color: var(--white-1);
+    margin-bottom: 10px;
+}
+
+header {
+    background-color: #F8FDEF;
+    padding-top: 10px;
 }
 
 .navitem {
     width: 100%;
-    padding: 20px 0;
+    padding: 15px 0;
     text-align: center;
+    background-color: var(--white-1);
     transition-duration: 0.5s;
-    transition-property: background-color;
+    transition-property: background-color, color, font-weight, font-size;
     border-radius: 5px;
+}
+
+.currentNav {
+    background-color: var(--black-1);
+    color: var(--yellow);
 }
 
 .navitem:hover {
     background-color: var(--yellow);
+    color: inherit;
 }
 
 a {
@@ -46,6 +58,9 @@ a {
     .navitem {
         text-align: left;
         padding: 5px 10px;
+    }
+    .nav {
+        padding: auto;
     }
 }
 

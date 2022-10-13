@@ -1,5 +1,7 @@
 body {
     scroll-behavior: smooth;
+    margin-top: 0px;
+    overflow-anchor: none;
 }
 
 nav {
@@ -18,6 +20,18 @@ nav {
     height: auto;
 }
 
+.logo {
+    margin-left: 10px;
+    max-width: 15vh;
+
+}
+
+.title {
+    max-width: 70vw;
+    font-size: 15vh;
+    margin: 0 auto;
+}
+
 #collapse{
     display: none;
 }
@@ -28,12 +42,30 @@ nav {
     margin-right: 10vw;
 }
 
-@media only screen and (max-width: 1000px) {
+#sticky-navbar {
+    position: sticky;
+    top: 0;
+    right: 0;
+    transition-duration: 0.5s;
+}
+
+#sticky-navbar.pinned {
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+.pinned .navitem {
+    font-size: 1.7vw;
+    padding: 5px 0;
+}
+
+header {
+    text-align: center;
+}
+
+@media only screen and (max-width: 1200px) {
     nav {
         column-gap: normal;
-    }
-    body {
-      background-color: lightcoral;
     }
     .container {
         max-width: 95vw;
@@ -43,12 +75,13 @@ nav {
     .navitem {
         font-size: 3.5vw;
     }
+    .pinned .navitem {
+        font-size: 3vw;
+    }
+        
 }
 
 @media only screen and (max-width: 600px) {
-    body {
-      background-color: lightblue;
-    }
     .container {
         max-width: 98vw;
         margin-left: 1vw;
@@ -59,5 +92,26 @@ nav {
     }
     .navitem {
         font-size: 3vh;
+    }
+    .pinned .navitem {
+        font-size: 3vh;
+        padding: 5px 10px;
+    }
+    .logo {
+        max-width: 7vh;
+        position: sticky;
+    }
+    .title {
+        font-size: 15vw;
+    }
+    header {
+        text-align: inherit;
+    }
+    #sticky-navbar {
+        position: inherit;
+        padding: 1vh !important; 
+    }
+    #sticky-navbar.pinned {
+        margin-bottom: 10px;
     }
 }
