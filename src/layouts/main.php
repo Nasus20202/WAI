@@ -16,15 +16,15 @@
     <link rel="stylesheet" href="<?php echo $basePath?>/assets/css/responsive.css">
   </head>
   <body>
-    <nav>
-      <?php
-      foreach (array_keys($routes) as &$routeName){
-        if($routes[$routeName][2]){
-          echo '<a href="'. $routeName .'" class="navitem">' . $routes[$routeName][1] . '</a>';
-        }
-      }?>
-    </nav>
     <div class="container">
+      <nav>
+        <?php
+        foreach (array_keys($routes) as &$routeName){
+          if($routes[$routeName][2]){
+            echo '<a href="'. $routeName .'" class="navitem">' . $routes[$routeName][1] . '</a>';
+          }
+        }?>
+              </nav>
         <?php include $content ?>
     </div>
   </body>
