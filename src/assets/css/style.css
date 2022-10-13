@@ -21,10 +21,6 @@ nav {
     margin-bottom: 10px;
 }
 
-nav:hover {
-    transform: scale(1.01);
-}
-
 nav.pinned {
     box-shadow: 0 0 10px 0 rgba(0,0,0,0.32);
 }
