@@ -51,7 +51,7 @@ function startTest() {
     badLetters = 0;
     if (timeInterval != null)
         clearInterval(timeInterval);
-    for (let i = 0; i < 3; i++) {
+    for (let i = 0; i < 20; i++) {
         if (i > 0)
             desiredInput += " ";
         desiredInput += words[Math.floor(Math.random() * words.length)];
