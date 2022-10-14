@@ -11,9 +11,15 @@
         <div class="stat">Czas: <span id="time">0</span> s</div>
         <div class="stat">Poprawność: <span id="accuracy">0</span>%</div>
     </div>
+    <progress id="progressbar" value="0" max="100"></progress>
     <button onclick="showResult()">Wyniki</button>
 </section>
 <section id="result" class="hidden">
     <h3>Wyniki</h3>
+    <div id="result-stats">
+        <div class="result-stat">Szybkość: <span id="wpm">0</span> WPM</div>
+        <div class="result-stat">Czas: <span id="time">0</span> s</div>
+        <div class="result-stat">Poprawność: <span id="accuracy">0</span>%</div>
+    </div>
     <button onclick="showTest()">Rozpocznij test</button>
 </section>

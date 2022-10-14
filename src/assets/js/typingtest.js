@@ -8,6 +8,7 @@ let timeInterval;
 let wpm = 0;
 let letters = 0;
 let errors = 0;
+let badLetters = 0;
 function showTest() {
     let testContainer = document.getElementById("test");
     let resultContainer = document.getElementById("result");
@@ -26,6 +27,9 @@ function showResult() {
     resultContainer.classList.remove("hidden");
     isPlaying = false;
 }
+function endTest(letters, badLetters, errors, time) {
+    showResult();
+}
 function startTest() {
     isPlaying = true;
     desiredInput = "";
@@ -33,15 +37,19 @@ function startTest() {
     time = -1;
     letters = 0;
     errors = 0;
+    badLetters = 0;
     if (timeInterval != null)
         clearInterval(timeInterval);
-    for (let i = 0; i < 30; i++) {
+    for (let i = 0; i < 3; i++) {
         if (i > 0)
             desiredInput += " ";
         desiredInput += words[Math.floor(Math.random() * words.length)];
     }
     updateTime();
     updateTyping();
+    updateProgress();
+    updateWpm();
+    updateAccuracy();
 }
 function updateTyping() {
     let typing = document.getElementById("typing");
@@ -49,7 +57,7 @@ function updateTyping() {
         return;
     let output = "";
     let userWords = userInput.split(" ");
-    let localLetters = 0, localErrors = 0;
+    let localLetters = 0, localErrors = 0, localBadLetters = 0;
     desiredInput.split(" ").forEach((word, index) => {
         let isCorrect = true;
         if (index > 0)
@@ -66,12 +74,15 @@ function updateTyping() {
                 else if (i < userWord.length) {
                     output += "<span class='incorrect'>" + word[i] + "</span>";
                     isCorrect = false;
+                    localBadLetters++;
                 }
                 else
                     output += word[i];
             }
             if (userWord.length > word.length) {
-                output += "<span class='incorrect'>" + userWord.substring(word.length, userWord.length + (userWord.length - word.length)) + "</span>";
+                let rest = userWord.substring(word.length, userWord.length + (userWord.length - word.length));
+                output += "<span class='incorrect'>" + rest + "</span>";
+                localBadLetters += rest.length;
                 isCorrect = false;
             }
         }
@@ -80,6 +91,7 @@ function updateTyping() {
     });
     errors = localErrors;
     letters = localLetters;
+    badLetters = localBadLetters;
     if (time > 0)
         wpm = Math.round((letters * 0.2 - errors) / (time / 60));
     else
@@ -104,6 +116,9 @@ function handleKeypress(key) {
     }
     updateTyping();
     updateProgress();
+    if (key == ' ' && userInput.split(' ').length == desiredInput.split(' ').length + 1) {
+        endTest(letters, badLetters, errors, time);
+    }
 }
 function updateTime() {
     let timeContainer = document.getElementById("time");
@@ -116,23 +131,24 @@ function updateTime() {
 }
 function updateWpm() {
     let wpmContainer = document.getElementById("wpm");
-    let accuracyContainer = document.getElementById("accuracy");
-    if (wpmContainer == null || accuracyContainer == null)
+    if (wpmContainer == null)
         return;
     wpmContainer.innerHTML = wpm.toString();
-    accuracyContainer.innerHTML = Math.round(((letters - errors) / letters) * 100).toString();
 }
 function updateProgress() {
     let progressContainer = document.getElementById("progress");
-    if (progressContainer == null)
+    let progressBar = document.getElementById("progressbar");
+    if (progressContainer == null || progressBar == null)
         return;
-    progressContainer.innerHTML = Math.round((letters / desiredInput.length) * 100).toString();
+    let progress = Math.round(((letters + userInput.split(" ").length - 1) / desiredInput.length) * 100).toString();
+    progressContainer.innerHTML = progress;
+    progressBar.setAttribute("value", progress);
 }
 function updateAccuracy() {
     let accuracyContainer = document.getElementById("accuracy");
     if (accuracyContainer == null)
         return;
-    accuracyContainer.innerHTML = Math.round(((letters - errors) / letters) * 100).toString();
+    accuracyContainer.innerHTML = letters == 0 ? '0' : Math.round((Math.max(letters - badLetters, 0) / letters) * 100).toString();
 }
 addEventListener('keydown', (event) => {
     handleKeypress(event.key);
