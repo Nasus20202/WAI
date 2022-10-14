@@ -30,6 +30,16 @@ function showResult() : void {
 }
 
 function endTest(letters : number, badLetters : number, errors : number, time : number) : void {
+    let wpmContainer = document.getElementById("result-wpm");
+    let accuracyContainer = document.getElementById("result-accuracy");
+    if (wpmContainer == null || accuracyContainer == null)
+        return;
+    wpmContainer.innerHTML =  Math.round((letters * 0.2 - errors) / (time / 60)).toString();
+    accuracyContainer.innerHTML = letters == 0 ? '0' : Math.round((Math.max(letters - badLetters, 0) / letters) * 100).toString();
+    let stats = document.getElementsByClassName("result-stat");
+    for(let i = 0; i < stats.length; i++) {
+        stats[i].classList.remove("hidden");
+    };
     showResult();
 }
 

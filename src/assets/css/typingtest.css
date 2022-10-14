@@ -27,6 +27,14 @@
     justify-content: space-around;
 }
 
+#result-wpm {
+
+}
+
+#result-accuracy {
+    
+}
+
 .result-stat {
     flex: 1;
     text-align: center;

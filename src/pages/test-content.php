@@ -17,9 +17,8 @@
 <section id="result" class="hidden">
     <h3>Wyniki</h3>
     <div id="result-stats">
-        <div class="result-stat">Szybkość: <span id="wpm">0</span> WPM</div>
-        <div class="result-stat">Czas: <span id="time">0</span> s</div>
-        <div class="result-stat">Poprawność: <span id="accuracy">0</span>%</div>
+        <div class="result-stat hidden">Szybkość: <span id="result-wpm">0</span> WPM</div>
+        <div class="result-stat hidden">Poprawność: <span id="result-accuracy">0</span>%</div>
     </div>
     <button onclick="showTest()">Rozpocznij test</button>
 </section>
