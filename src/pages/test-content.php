@@ -20,7 +20,13 @@
         <div class="result-stat hidden">Szybkość: <span id="result-wpm">0</span> WPM</div>
         <div class="result-stat hidden">Poprawność: <span id="result-accuracy">0</span>%</div>
     </div>
-    <button onclick="showTest()">Rozpocznij test</button>
+    <div class="row">
+        <button id="newtestbtn" onclick="showTest()">Rozpocznij test</button>
+        <div id="word-count-container">
+            Ilość słów: 
+            <input type="text" id="word-count" value="30" placeholder="10-1000" />
+        </div>
+    </div>
     <div id="history">
 
     </div>

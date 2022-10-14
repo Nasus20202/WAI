@@ -93,6 +93,12 @@ header {
     border-radius: 7px 0 0 7px;
 }
 
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
 @media only screen and (max-width: 1000px) {
     nav {
         column-gap: normal;
@@ -157,5 +163,9 @@ header {
     }
     .card-img{
         border-radius: 7px 7px 0 0;
+    }
+    .row {
+        flex-direction: column;
+        align-items: center;
     }
 }

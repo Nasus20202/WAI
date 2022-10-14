@@ -12,9 +12,15 @@ let badLetters = 0;
 function showTest() : void {
     let testContainer = document.getElementById("test");
     let resultContainer = document.getElementById("result");
-    if(testContainer == null || resultContainer == null)
+    let wordCounter = <HTMLInputElement>document.getElementById("word-count");
+    if(testContainer == null || resultContainer == null || wordCounter == null)
         return;
-    startTest();
+    let wordCount = parseInt(wordCounter.value);
+    if (isNaN(wordCount) || wordCount < 10 || wordCount > 1000) {
+        wordCounter.value = "30";
+        wordCount = 30;
+    }
+    startTest(wordCount);
     testContainer.classList.remove("hidden");
     resultContainer.classList.add("hidden");
 }
