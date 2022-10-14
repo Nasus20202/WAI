@@ -3,7 +3,8 @@
     --white-0: #F8FDEF;
     --white-1: #E8EDDF;
     --white-2: #CFDBD5;
-    --yellow:  #F5CB5C;
+    --yellow-0:  #F5CB5C;
+    --yellow-1: #dbb64f;
     --black-1: #333533;
     --black-2: #242423;
 }
@@ -36,7 +37,7 @@ nav.pinned {
 }
 
 .navitem:hover {
-    background-color: var(--yellow);
+    background-color: var(--yellow-0);
     color: inherit;
     box-shadow: 0 0 15px 0 rgba(0,0,0,0.2);
 }
@@ -52,7 +53,7 @@ header:hover {
 
 .currentNav {
     background-color: var(--black-1);
-    color: var(--yellow);
+    color: var(--yellow-0);
 }
 
 a {
@@ -63,7 +64,7 @@ a {
 .card {
     border-radius: 10px;
     margin: 20px 0;
-    border: var(--yellow) 3px solid;
+    border: var(--yellow-0) 3px solid;
     transition: 0.7s;
     overflow: hidden;
     display: inline-block;
@@ -85,6 +86,22 @@ a {
     padding: 20px;
 }
 
+button {
+    padding: 5px 10px;
+    margin: 0 5px;
+    background-color: var(--yellow-0);
+    font-family: Lato, Verdana, Geneva, Tahoma, sans-serif;
+    border: 3px solid var(--yellow-1);
+    border-radius: 5px;
+    font-size: 1em;
+    transition-duration: 0.05s;
+}
+
+button:hover {
+    transform: scale(1.07);
+    border-color: var(--yellow-0);
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.25);
+}
 
 @media only screen and (max-width: 1000px) {
 
