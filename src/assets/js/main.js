@@ -1,5 +1,6 @@
-addEventListener('scroll', function (event) {
-    var stickyNavbar = document.getElementById('sticky-navbar');
+"use strict";
+addEventListener('scroll', (event) => {
+    let stickyNavbar = document.getElementById('sticky-navbar');
     if (stickyNavbar == null)
         return;
     if (window.scrollY > 0) {
