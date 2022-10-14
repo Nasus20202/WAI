@@ -32,7 +32,7 @@ function endTest(letters, badLetters, errors, time) {
     let accuracyContainer = document.getElementById("result-accuracy");
     if (wpmContainer == null || accuracyContainer == null)
         return;
-    wpmContainer.innerHTML = Math.round((letters * 0.2 - errors) / (time / 60)).toString();
+    wpmContainer.innerHTML = Math.max(Math.round((letters * 0.2 - errors) / (time / 60)), 0).toString();
     accuracyContainer.innerHTML = letters == 0 ? '0' : Math.round((Math.max(letters - badLetters, 0) / letters) * 100).toString();
     let stats = document.getElementsByClassName("result-stat");
     for (let i = 0; i < stats.length; i++) {
