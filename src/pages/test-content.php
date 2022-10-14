@@ -21,4 +21,7 @@
         <div class="result-stat hidden">Poprawność: <span id="result-accuracy">0</span>%</div>
     </div>
     <button onclick="showTest()">Rozpocznij test</button>
+    <div id="history">
+
+    </div>
 </section>

@@ -23,6 +23,7 @@ function showResult() {
     let resultContainer = document.getElementById("result");
     if (testContainer == null || resultContainer == null)
         return;
+    updateHistory();
     testContainer.classList.add("hidden");
     resultContainer.classList.remove("hidden");
     isPlaying = false;
@@ -39,7 +40,34 @@ function endTest(letters, badLetters, errors, time) {
         stats[i].classList.remove("hidden");
     }
     ;
+    addToHistory(Math.max(Math.round((letters * 0.2 - errors) / (time / 60)), 0), letters == 0 ? 0 : Math.round((Math.max(letters - badLetters, 0) / letters) * 100));
     showResult();
+}
+function updateHistory() {
+    let historyContainer = document.getElementById("history");
+    if (historyContainer == null)
+        return;
+    let historyJson = sessionStorage.getItem("history");
+    let history = historyJson == null ? [] : JSON.parse(historyJson);
+    historyContainer.innerHTML = "";
+    if (history.length > 0) {
+        let elem = document.createElement("span");
+        elem.id = "history-title";
+        elem.innerHTML = "Historia";
+        historyContainer.appendChild(elem);
+    }
+    history.reverse().forEach((entry, index) => {
+        let entryContainer = document.createElement("div");
+        entryContainer.innerHTML = '<span style="color: #707070">' + (index + 1).toString() + '. ' + entry.time + ' &#8226</span> ' + entry.wpm + ' WPM, ' + entry.accuracy + '% poprawności';
+        if (historyContainer != null)
+            historyContainer.appendChild(entryContainer);
+    });
+}
+function addToHistory(wpm, accuracy) {
+    let historyJson = sessionStorage.getItem("history");
+    let history = historyJson == null ? [] : JSON.parse(historyJson);
+    history.push({ wpm: wpm, accuracy: accuracy, time: new Date().toLocaleTimeString() });
+    sessionStorage.setItem("history", JSON.stringify(history));
 }
 function startTest() {
     isPlaying = true;
@@ -53,7 +81,7 @@ function startTest() {
         clearInterval(timeInterval);
         timeInterval = -1;
     }
-    for (let i = 0; i < 20; i++) {
+    for (let i = 0; i < 2; i++) {
         if (i > 0)
             desiredInput += " ";
         desiredInput += words[Math.floor(Math.random() * words.length)];
