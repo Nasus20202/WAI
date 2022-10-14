@@ -15,7 +15,7 @@
     <button onclick="showResult()">Wyniki</button>
 </section>
 <section id="result" class="hidden">
-    <h3>Wyniki</h3>
+    <h3>Wyniki <span id="record"></span></h3>
     <div id="result-stats">
         <div class="result-stat hidden">Szybkość: <span id="result-wpm">0</span> WPM</div>
         <div class="result-stat hidden">Poprawność: <span id="result-accuracy">0</span>%</div>

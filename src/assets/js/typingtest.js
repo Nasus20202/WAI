@@ -45,7 +45,8 @@ function endTest(letters, badLetters, errors, time) {
 }
 function updateHistory() {
     let historyContainer = document.getElementById("history");
-    if (historyContainer == null)
+    let recordContainer = document.getElementById("record");
+    if (historyContainer == null || recordContainer == null)
         return;
     let historyJson = sessionStorage.getItem("history");
     let history = historyJson == null ? [] : JSON.parse(historyJson);
@@ -62,9 +63,20 @@ function updateHistory() {
         if (historyContainer != null)
             historyContainer.appendChild(entryContainer);
     });
+    let recordString = localStorage.getItem("record");
+    if (recordString != null) {
+        recordContainer.innerHTML = "- Rekord: " + recordString + " WPM";
+    }
 }
 function addToHistory(wpm, accuracy) {
     let historyJson = sessionStorage.getItem("history");
+    let recordString = localStorage.getItem("record");
+    if (recordString == null)
+        recordString = "0";
+    let record = parseInt(recordString);
+    if (wpm > record) {
+        localStorage.setItem("record", wpm.toString());
+    }
     let history = historyJson == null ? [] : JSON.parse(historyJson);
     history.push({ wpm: wpm, accuracy: accuracy, time: new Date().toLocaleTimeString() });
     sessionStorage.setItem("history", JSON.stringify(history));
