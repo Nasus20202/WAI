@@ -8,6 +8,8 @@
 
 #typing {
     margin: 20px 0;
+    color: #727272;
+    white-space: pre-wrap;
 }
 
 #typing-stats {
@@ -31,4 +33,22 @@ button {
     margin-left: 10%;
     width: 80%;
     transition-duration: 0.5s;
+}
+
+.correct {
+    color: var(--black-1);
+} 
+.incorrect {
+    color: red;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 1000px) {
+
+}
+
+@media screen and (max-width: 600px) {
+    #typing-stats {
+        flex-direction: column;
+    }
 }

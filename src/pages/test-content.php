@@ -3,10 +3,10 @@
 <section id="test">
     <h3>Test pisania</h3>
     <div id="typing">
-        abc def
+        
     </div>
     <div id="typing-stats">
-        <div class="stat">Progress: <span id="progress">0</span></div>
+        <div class="stat">Progress: <span id="progress">0</span>%</div>
         <div class="stat">Szybkość: <span id="wpm">0</span> WPM</div>
         <div class="stat">Czas: <span id="time">0</span> s</div>
         <div class="stat">Poprawność: <span id="accuracy">0</span>%</div>

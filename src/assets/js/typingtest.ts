@@ -4,6 +4,9 @@ let desiredInput = "";
 let userInput = ""; 
 let time = 0;
 let timeInterval : number;
+let wpm = 0;
+let letters = 0; 
+let errors = 0;
 
 function showTest() : void {
     let testContainer = document.getElementById("test");
@@ -26,28 +29,77 @@ function showResult() : void {
 }
 
 function startTest() : void {
-    isPlaying = true; desiredInput = ""; userInput = ""; time = 0;
+    isPlaying = true; desiredInput = ""; userInput = ""; time = -1; letters = 0; errors = 0;
     if (timeInterval != null)
         clearInterval(timeInterval);
-    timeInterval = setInterval(updateTime, 1000);
-    for(let i = 0; i < 25; i++) {
+    for(let i = 0; i < 30; i++) {
         if(i > 0)
             desiredInput += " ";
         desiredInput += words[Math.floor(Math.random() * words.length)];
     }
+    updateTime();
+    updateTyping();
 }
 
 function updateTyping() : void {
     let typing = document.getElementById("typing");
     if(typing == null)
         return;
-    typing.innerHTML = desiredInput;
+    let output = "";
+    let userWords = userInput.split(" ");
+    let localLetters = 0, localErrors = 0;
+    desiredInput.split(" ").forEach((word, index) => {
+        let isCorrect = true;
+        if(index > 0)
+            output += " ";
+        if(userWords.length <= index){
+            output += word;
+        } else {
+            let userWord = userWords[index];
+            localLetters += Math.min(word.length, userWord.length);
+            for(let i = 0; i < word.length; i++) {
+                if(i < userWord.length && word[i] == userWord[i])
+                    output += "<span class='correct'>" + word[i] + "</span>";
+                else if(i < userWord.length){
+                    output += "<span class='incorrect'>" + word[i] + "</span>";
+                    isCorrect = false;
+                }
+                else
+                    output += word[i]; 
+            }
+            if(userWord.length > word.length) {
+                output += "<span class='incorrect'>" + userWord.substring(word.length, userWord.length + (userWord.length - word.length)) + "</span>"; 
+                isCorrect = false;
+            }
+        }
+        if(!isCorrect)
+            localErrors++;
+    });
+    errors = localErrors; letters = localLetters;
+    if(time > 0)
+        wpm = Math.round((letters * 0.2 - errors) / (time / 60));
+    else
+        wpm = 0;
+    if(wpm < 0)
+        wpm = 0;
+    typing.innerHTML = output;
 }
 
 function handleKeypress(key : string) : void {
-    if(!isPlaying || key != ' ' && (key < 'a' || key > 'z') && (key < 'A' || key > 'Z') || key == "Enter"){
+    if(timeInterval == null)
+        timeInterval = setInterval(updateTime, 1000);
+    if(isPlaying && (key == "Backspace" || key == "Delete")) {
+        userInput = userInput.substring(0, userInput.length - 1);
+    }
+    else if(isPlaying && key.length == 1){
+        if(key == " " && userInput.length > 0 && userInput[userInput.length - 1] == " ")
+            return;
+        userInput += key;
+    } else {
         return;
-    } alert(key);
+    }
+    updateTyping();
+    updateProgress();
 }
 
 function updateTime() : void {
@@ -56,9 +108,34 @@ function updateTime() : void {
         return;
     time++;
     timeContainer.innerHTML = time.toString();
+    updateWpm();
+    updateAccuracy();
 }
 
-addEventListener('keypress', (event) => {
+function updateWpm() : void {
+    let wpmContainer = document.getElementById("wpm");
+    let accuracyContainer = document.getElementById("accuracy");
+    if(wpmContainer == null || accuracyContainer == null)
+        return;
+    wpmContainer.innerHTML = wpm.toString();
+    accuracyContainer.innerHTML = Math.round(((letters - errors) / letters) * 100).toString();
+}
+
+function updateProgress() : void {
+    let progressContainer = document.getElementById("progress");
+    if(progressContainer == null)
+        return;
+    progressContainer.innerHTML = Math.round((letters / desiredInput.length) * 100).toString();
+}
+
+function updateAccuracy() : void {
+    let accuracyContainer = document.getElementById("accuracy");
+    if(accuracyContainer == null)
+        return;
+    accuracyContainer.innerHTML = Math.round(((letters - errors) / letters) * 100).toString();
+}
+
+addEventListener('keydown', (event) => {
     handleKeypress(event.key);
 });
 
