@@ -81,7 +81,7 @@ function addToHistory(wpm, accuracy) {
     history.push({ wpm: wpm, accuracy: accuracy, time: new Date().toLocaleTimeString() });
     sessionStorage.setItem("history", JSON.stringify(history));
 }
-function startTest() {
+function startTest(wordCount = 30) {
     isPlaying = true;
     desiredInput = "";
     userInput = "";
@@ -93,7 +93,7 @@ function startTest() {
         clearInterval(timeInterval);
         timeInterval = -1;
     }
-    for (let i = 0; i < 30; i++) {
+    for (let i = 0; i < wordCount; i++) {
         if (i > 0)
             desiredInput += " ";
         desiredInput += words[Math.floor(Math.random() * words.length)];

@@ -17,6 +17,7 @@
     <script src="<?php echo $basePath?>/assets/js/main.js"></script>
   </head>
   <body>
+    <div id="theme-toggler" onclick="toggleTheme()"></div>
     <header>
       <div class="center">
         <img src="<?php echo $basePath?>/assets/img/logo.png" class="image logo" alt="keebee logo">

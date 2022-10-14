@@ -32,7 +32,7 @@ nav.pinned {
     padding: 10px 0;
     text-align: center;
     background-color: var(--white-1);
-    transition-duration: 0.5s;
+    transition-duration: 0.3s;
     border-radius: 5px;
 }
 
@@ -42,13 +42,17 @@ nav.pinned {
     box-shadow: 0 0 15px 0 rgba(0,0,0,0.2);
 }
 
+#sticky-navbar {
+    transition-duration: 0.5;
+}
+
 header {
-    transition-duration: 1s;
+    transition: all 1s, background-color 1ms, color 1ms;
     background-color: var(--white-0);
     padding-top: 10px;
 }
 header:hover {
-    transform: scale(1.01);
+    transform: scale(1.02);
 }
 
 .currentNav {
@@ -71,7 +75,7 @@ a {
 }
 
 .card:hover {
-    box-shadow: 0 0 1em #bbb;
+    box-shadow: 0 0 15px 0 rgba(0,0,0,0.3);
     transform: scale(1.015);
   }
 
@@ -101,6 +105,51 @@ button:hover {
     transform: scale(1.07);
     border-color: var(--yellow-0);
     box-shadow: 0 0 10px 0 rgba(0,0,0,0.25);
+}
+
+#theme-toggler {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 50px;
+    background-color: var(--white-1);
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.25);
+    transition-duration: 0.5s;
+    z-index: 1;
+}
+
+/* Dark mode */
+.dark {
+    --white-0: #242423;
+    --white-1: #333533;
+    --white-2: #444;
+    --yellow-0:  #F5CB5C;
+    --yellow-1: #dbb64f;
+    --black-1: #E8EDDF;
+    --black-2: #F8FDEF;
+    background-color: var(--white-0);
+}
+
+.dark header {
+    background-color: var(--white-2);
+}
+.dark .currentNav {
+    background-color: var(--white-0);
+    color: var(--yellow-0);
+}
+
+.dark .navitem:hover {
+    color: var(--white-0);
+}
+
+.dark .navitem:hover {
+    background-color: var(--yellow-0);
+}
+
+.dark .card {
+    border: #a3873a 1px solid;
 }
 
 @media only screen and (max-width: 1000px) {

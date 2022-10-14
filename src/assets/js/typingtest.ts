@@ -92,13 +92,13 @@ function addToHistory(wpm : number, accuracy : number) : void {
     sessionStorage.setItem("history", JSON.stringify(history));
 }
 
-function startTest() : void {
+function startTest(wordCount : number = 30) : void {
     isPlaying = true; desiredInput = ""; userInput = ""; time = -1; letters = 0; errors = 0; badLetters = 0;
     if (timeInterval != null) {
         clearInterval(timeInterval);
         timeInterval = -1;
     }
-    for(let i = 0; i < 30; i++) {
+    for(let i = 0; i < wordCount; i++) {
         if(i > 0)
             desiredInput += " ";
         desiredInput += words[Math.floor(Math.random() * words.length)];
