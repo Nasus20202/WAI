@@ -81,7 +81,7 @@ function startTest() {
         clearInterval(timeInterval);
         timeInterval = -1;
     }
-    for (let i = 0; i < 2; i++) {
+    for (let i = 0; i < 30; i++) {
         if (i > 0)
             desiredInput += " ";
         desiredInput += words[Math.floor(Math.random() * words.length)];
@@ -125,6 +125,10 @@ function updateTyping() {
                 output += "<span class='incorrect'>" + rest + "</span>";
                 localBadLetters += rest.length;
                 isCorrect = false;
+            }
+            if (userWord.length < word.length && index < userWords.length - 1) {
+                isCorrect = false;
+                localBadLetters += word.length - userWord.length;
             }
         }
         if (!isCorrect)
