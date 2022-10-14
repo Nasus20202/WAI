@@ -49,8 +49,10 @@ function startTest() {
     letters = 0;
     errors = 0;
     badLetters = 0;
-    if (timeInterval != null)
+    if (timeInterval != null) {
         clearInterval(timeInterval);
+        timeInterval = -1;
+    }
     for (let i = 0; i < 20; i++) {
         if (i > 0)
             desiredInput += " ";
@@ -114,6 +116,8 @@ function updateTyping() {
 function handleKeypress(key) {
     if (timeInterval == null)
         timeInterval = setInterval(updateTime, 1000);
+    else if (timeInterval == -1)
+        timeInterval = setInterval(updateTime, 1000);
     if (isPlaying && (key == "Backspace" || key == "Delete")) {
         userInput = userInput.substring(0, userInput.length - 1);
     }
@@ -144,6 +148,12 @@ function updateWpm() {
     let wpmContainer = document.getElementById("wpm");
     if (wpmContainer == null)
         return;
+    if (time > 0)
+        wpm = Math.round((letters * 0.2 - errors) / (time / 60));
+    else
+        wpm = 0;
+    if (wpm < 0)
+        wpm = 0;
     wpmContainer.innerHTML = wpm.toString();
 }
 function updateProgress() {
