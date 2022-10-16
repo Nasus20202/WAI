@@ -24,7 +24,7 @@
         <button id="newtestbtn" onclick="showTest()">Rozpocznij test</button>
         <div id="word-count-container">
             Ilość słów: 
-            <input type="text" id="word-count" value="30" placeholder="10-1000" />
+            <input type="text" id="word-count" value="30" placeholder="10-1000">
         </div>
     </div>
     <div id="history">
