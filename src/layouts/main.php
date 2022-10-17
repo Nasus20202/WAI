@@ -11,6 +11,7 @@
     <title><?php echo $title ?></title>
     <link rel="stylesheet" href="<?php echo $basePath?>/assets/css/style.css">
     <link rel="stylesheet" href="<?php echo $basePath?>/assets/css/responsive.css">
+    <noscript><link rel="stylesheet" href="<?php echo $basePath?>/assets/css/responsive.css"></noscript>
     <script src="<?php echo $basePath?>/assets/js/main.js"></script>
   </head>
   <body>
@@ -24,9 +25,10 @@
     <div class="container">
       <nav id="sticky-navbar">
         <?php
+        $routeId = 0;
         foreach (array_keys($routes) as &$routeName){
           if($routes[$routeName][2]){
-            echo '<a href="'. $routeName .'" class="navitem' . ($path == $routeName ? ' currentNav' : '') . '">' . $routes[$routeName][1] . '</a>';
+            echo '<a id="navlink'. $routeId .'" href="'. $routeName .'" class="navitem' . ($path == $routeName ? ' currentNav' : '') . '">' . $routes[$routeName][1] . '</a>'; $routeId++;
           }
         }?>
         </nav>
