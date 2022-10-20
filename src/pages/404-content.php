@@ -1,1 +1,1 @@
-Page not found - 404
+<h1 style="text-align: center">Strona o podanym adresie nie istnieje</h1>
