@@ -94,7 +94,7 @@
                         <td>Cichy</td>
                     </tr>
                 </table>
-                <br />
+                <br>
                 Table przedstawia przełączniki na przykładznie produków marki <b>Gateron</b>. Inne popularne firmy produkujące switche do klawiatur to m. in. Cherry, Kailh, Outemu, TTC, Everglide, ZealPC, AKKO, JWK.
             </div>
         </div>
