@@ -45,11 +45,8 @@
             <a href="<?php echo $basePath ?>/assets/img/kb9.jpg">
                 <img class="gallery-photo" src="<?php echo $basePath?>/assets/img/kb9-min.jpg" alt="Klawiatura">
             </a>
-            <style>
-                #js-gallery{display: none;}
-            </style>
         </noscript>
-        <div class="gallery" id="js-gallery">
+        <div class="gallery ns-hide" id="js-gallery">
             <img class="gallery-photo" src="<?php echo $basePath?>/assets/img/kb0-min.jpg" alt="Klawiatura" onclick='showPhoto("<?php echo $basePath?>/assets/img/kb0.jpg")'>
             <img class="gallery-photo" src="<?php echo $basePath?>/assets/img/kb1-min.jpg" alt="Klawiatura" onclick='showPhoto("<?php echo $basePath?>/assets/img/kb1.jpg")'>
             <img class="gallery-photo" src="<?php echo $basePath?>/assets/img/kb2-min.jpg" alt="Klawiatura" onclick='showPhoto("<?php echo $basePath?>/assets/img/kb2.jpg")'>

@@ -11,7 +11,7 @@
     <title><?php echo $title ?></title>
     <link rel="stylesheet" href="<?php echo $basePath?>/assets/css/style.css">
     <link rel="stylesheet" href="<?php echo $basePath?>/assets/css/responsive.css">
-    <noscript><link rel="stylesheet" href="<?php echo $basePath?>/assets/css/noscript.css"></noscript>
+    <noscript><link rel="stylesheet" href="<?php echo $basePath?>/assets/css/noscript.css"><script>.ns-hide{display: none;}</script></noscript>
     <script src="<?php echo $basePath?>/assets/js/main.js"></script>
   </head>
   <body>
