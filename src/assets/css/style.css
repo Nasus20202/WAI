@@ -87,6 +87,7 @@ a {
     transition: 0.7s;
     overflow: hidden;
     display: inline-block;
+    background-color: var(--white-0);
 }
 
 .card:hover {

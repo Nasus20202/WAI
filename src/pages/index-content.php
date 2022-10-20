@@ -1,5 +1,11 @@
-<h3>Klawiatury mechaniczne</h3>
-Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus, eum praesentium, sunt autem porro culpa officia repellendus laboriosam nulla labore, in illo dolorum officiis qui maxime reprehenderit animi architecto ipsa?
+<script src="<?php echo $basePath ?>/assets/js/jquery.js"></script>
+<script src="<?php echo $basePath ?>/assets/js/parallax.js"></script>
+<link rel="stylesheet" href="<?php echo $basePath ?>/assets/css/index.css">
+
+<div class="parallax-window" data-parallax="scroll" data-image-src="<?php echo $basePath ?>/assets/img/kb9.jpg">
+    <span class="parallax-text">Klawiatury mechaniczne</span>
+</div>
+
 <article class="card card-right">
     <div class="card-content">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi iusto tempora libero at, officia molestiae corrupti, asperiores accusantium nesciunt in aliquid! Quae vel, distinctio praesentium quod nam maiores expedita culpa!
