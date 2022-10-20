@@ -1,6 +1,10 @@
 <link rel="stylesheet" href="<?php echo $basePath ?>/assets/css/details.css">
 <script src="<?php echo $basePath ?>/assets/js/gallery.js"></script>
 <link rel="stylesheet" href="<?php echo $basePath ?>/assets/css/gallery.css">
+<link rel="stylesheet" href="<?php echo $basePath ?>/assets/js/jquery-ui/jquery-ui.css">
+<script src="<?php echo $basePath ?>/assets/js/jquery.js"></script>
+<script src="<?php echo $basePath ?>/assets/js/jquery-ui/jquery-ui.js"></script>
+<script src="<?php echo $basePath ?>/assets/js/details.js"></script>
 <section>
     <h3>Szczegóły</h3>
     <article class="card card-right" id="elements">
@@ -107,11 +111,41 @@
             </div>
         </div>
     </article>
-    <article class="card card-right" id="poll">
+    <article class="card" id="poll">
+        <img class="card-img" id="poll-img" src="<?php echo $basePath?>/assets/img/kb6-min.jpg" alt="Klawiatura">
         <div class="card-content">
-        <h4 style="margin: 10px 0">Ankieta</h4>
-            <form>
-                Poll
+            <h4 style="margin: 10px 0">Ankieta</h4>
+            <form action="/poll" method="POST">
+                <span><label for="age">Twój wiek:</label><input type="number" class="poll-input" id="age" title="Wiek jest daną jedynie statystyczną" required></span>
+                <span><label for="keyboard">Twoja klawiatura:</label><input class="poll-input" id="keyboard" required></span>
+                <span><label for="custom">Custom? </label><input type="checkbox" id="custom"></span>
+                <span><label for="budget">Budżet:</label><input class="poll-input" type="number" id="budget" required> zł</span>
+                <fieldset>
+                    <legend>Rodzaj przełącznika</legend>
+                    <label for="linear">Linear</label>
+                    <input type="radio" name="switchType" id="linear" required>
+                    <label for="tactile">Tactile</label>
+                    <input type="radio" name="switchType" id="tactile">
+                    <label for="clicky">Clicky</label>
+                    <input type="radio" name="switchType" id="clicky">
+                </fieldset>
+                <span><label for="switch">Model przełącznika:</label><input class="poll-input" id="switch" required></span>
+                <span><label for="color">Kolor przewodni:</label><input class="poll-input" id="color" type="color" required></span>
+                <span><label for="rgb">Podświetlenie RGB? </label><input type="checkbox" id="rgb"></span>
+                <span><label for="photo">Zdjęcie: </label><input class="poll-input" type="file" id="photo"></span>
+                <span><label for="priority">Co jest dla ciebie najważniejsze:
+                    <select id="priority" class="poll-input"  name="priority" required>
+                        <option value="price">Cena</option>
+                        <option value="look">Wygląd</option>
+                        <option value="comfort">Komfort</option>
+                        <option value="sound">Dźwięk</option>
+                    </select>
+                </span>
+                <span><label for="email">Email:</label><input class="poll-input" id="email" title="Pole nieobowiązkowe"  type="email"></span>
+                <div id="form-btn-container">
+                    <button type="submit">Wyślij</button>
+                    <button type="reset">Reset</button>
+                </div>
             </form>
         </div>
     </article>

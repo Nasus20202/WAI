@@ -22,6 +22,14 @@ td {
     width: 50%;
     object-fit: contain;
 } 
+#poll-img{
+    width: 40%;
+}
+
+form {
+    display: inline;
+    min-width: 45vw;
+}
 
 .no-zoom:hover {
     transform: none;
@@ -53,7 +61,7 @@ td {
 }
 
 @media only screen and (max-width: 600px) {
-    #teardown {
+    #teardown, #poll-img {
         width: 100%;
     }
     #card-content-layouts{
@@ -70,6 +78,20 @@ td {
         border-radius: 5px 0 0 0;
     }
 }
+#form-btn-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+#form-btn-container button{
+    width: 100%;
+    margin-left: 1rem;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
 @media only screen and (max-width: 1200px) {
     #elements {
@@ -78,4 +100,40 @@ td {
     #teardown {
         width: 100%;
     }
+}
+form span {
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.poll-input {
+    background-color: var(--white-1);
+    border-radius: 5px;
+    font-size: large;
+    border: none;
+    margin-left: 10px;
+}
+.poll-input:focus{
+    outline: 1px solid var(--yellow-0);
+}
+.dark .poll-input {
+    color: var(--yellow-0);
+}
+
+.ui-checkboxradio-label{
+    color: var(--black-0) !important;
+    background-color: var(--white-0) !important;
+    font-family: Lato, Calibri, Tahoma, 'Calibri Light', Verdana, Geneva, sans-serif !important;
+}
+.ui-checkboxradio-label:active{
+    border: initial !important;
+}
+.ui-state-active {
+    background: var(--yellow-1) !important;
+    color: black !important;
+    border: none !important;
+}
+.ui-checkboxradio-icon {
+    pointer-events: none !important;
+    display: none !important;
 }
