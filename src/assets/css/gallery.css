@@ -39,8 +39,8 @@
 .modal-content {
   margin: auto;
   display: block;
-  width: 90%;
-  max-width: 960px;
+  max-width: 80vw;
+  max-height: 80vh;
   border-radius: 3px;
   z-index: 2;
 }

@@ -186,9 +186,6 @@ button:hover {
     .nav {
         padding: auto;
     }
-    .card {
-        flex-direction: column;
-    }
     .card-img {
         width: 100%;
         border-radius: 7;

@@ -185,6 +185,9 @@ header {
     .card-left {
         flex-direction: column;
     }
+    .card {
+        flex-direction: column;
+    }
     .card-img{
         border-radius: 7px 7px 0 0;
     }

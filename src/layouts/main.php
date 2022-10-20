@@ -34,7 +34,7 @@
                 <div class="dropbtn' . ($path == $routeName ? ' currentNav' : '') . '">Szczegóły</div>
                 <div class="dropdown-content">
                   <a class="dropdown-link" href="/details">Informacje</a>
-                  <a class="dropdown-link" href="/details#2">Informacje 2</a>
+                  <a class="dropdown-link" href="/details#poll">Ankieta</a>
                   <a class="dropdown-link" href="https://shop.knasuta.me/s/peryferia/klawiatury" target="_blank">Sklep</a>
                   <a class="dropdown-link" href="https://knasuta.me" target="_blank">Autor</a>
                 </div>
