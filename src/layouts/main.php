@@ -28,7 +28,22 @@
         $routeId = 0;
         foreach (array_keys($routes) as &$routeName){
           if($routes[$routeName][2]){
-            echo '<a id="navlink'. $routeId .'" href="'. $routeName .'" class="navitem' . ($path == $routeName ? ' currentNav' : '') . '">' . $routes[$routeName][1] . '</a>'; $routeId++;
+            if($routeId == 1){
+              echo '
+              <div class="dropdown">
+                <div class="dropbtn' . ($path == $routeName ? ' currentNav' : '') . '">Szczegóły</div>
+                <div class="dropdown-content">
+                  <a class="dropdown-link" href="/details">Informacje</a>
+                  <a class="dropdown-link" href="/details#2">Informacje 2</a>
+                  <a class="dropdown-link" href="https://shop.knasuta.me/s/peryferia/klawiatury" target="_blank">Sklep</a>
+                  <a class="dropdown-link" href="https://knasuta.me" target="_blank">Autor</a>
+                </div>
+              </div> 
+            ';
+            } else {
+              echo '<a id="navlink'. $routeId .'" href="'. $routeName .'" class="navitem' . ($path == $routeName ? ' currentNav' : '') . '">' . $routes[$routeName][1] . '</a>'; 
+            }
+            $routeId++;
           }
         }?>
         </nav>
@@ -37,7 +52,7 @@
       </main>
     </div>
     <footer>
-        2022 &copy; Krzysztof Nasuta
-      </footer>
+        2022 &copy; <a href="https://knasuta.me" target="_blank">Krzysztof Nasuta</a> 
+    </footer>
   </body>
 </html>

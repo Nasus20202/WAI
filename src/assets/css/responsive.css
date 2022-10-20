@@ -5,12 +5,13 @@ body {
 }
 
 nav {
-    display: grid; overflow: hidden;
+    display: grid; 
+    /*overflow: hidden;*/
     grid-template-columns: 1fr 1fr 1fr 1fr;
     column-gap: 2rem;
 }
 
-.navitem {
+.navitem, .dropbtn {
     font-size: 1.8vw;
 }
 
@@ -53,7 +54,7 @@ nav {
     margin-bottom: 20px;
 }
 
-.pinned .navitem {
+.pinned .navitem, .pinned .dropbtn {
     font-size: 1.7vw;
     padding: 5px 0;
 }
@@ -98,6 +99,29 @@ header {
     flex-wrap: wrap;
     justify-content: space-between;
 }
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--yellow-1);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    width: 100%;
+    z-index: 1;
+    transition-duration: 1s;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    display: block;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
 
 @media only screen and (max-width: 1000px) {
     nav {
@@ -108,10 +132,10 @@ header {
         margin-left: 2.5vw;
         margin-right: 2.5vw;
     }
-    .navitem {
+    .navitem, .dropbtn {
         font-size: 3.5vw;
     }
-    .pinned .navitem {
+    .pinned .navitem, .pinned .dropbtn {
         font-size: 3vw;
     }
     .card-img {
@@ -128,10 +152,10 @@ header {
     nav {
         grid-template-columns: 1fr;
     }
-    .navitem {
+    .navitem, .dropbtn {
         font-size: 3vh;
     }
-    .pinned .navitem {
+    .pinned .navitem, .pinned .dropbtn {
         font-size: 3vh;
         padding: 5px 10px;
     }

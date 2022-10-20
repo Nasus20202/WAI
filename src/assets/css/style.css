@@ -27,7 +27,7 @@ nav.pinned {
     box-shadow: 0 0 10px 0 rgba(0,0,0,0.32);
 }
 
-.navitem {
+.navitem, .dropbtn {
     width: 100%;
     padding: 10px 0;
     text-align: center;
@@ -36,7 +36,7 @@ nav.pinned {
     border-radius: 5px;
 }
 
-.navitem:hover {
+.navitem:hover, .dropbtn:hover {
     background-color: var(--yellow-0);
     color: inherit;
     box-shadow: 0 0 15px 0 rgba(0,0,0,0.2);
@@ -151,11 +151,11 @@ button:hover {
     color: var(--yellow-0);
 }
 
-.dark .navitem:hover {
+.dark .navitem:hover, .dark .dropbtn:hover {
     color: var(--white-0);
 }
 
-.dark .navitem:hover {
+.dark .navitem:hover, .dark .dropbtn:hover {
     background-color: var(--yellow-0);
 }
 
@@ -163,12 +163,22 @@ button:hover {
     border: #a3873a 1px solid;
 }
 
+.dropdown-link {
+    margin: 7px;
+    border-radius: 10px;
+}
+
+.dropdown-link:hover {
+    background-color: #242423;
+    color: var(--yellow-0);
+}
+
 @media only screen and (max-width: 1000px) {
 
 }
 
 @media only screen and (max-width: 600px) {
-    .navitem {
+    .navitem, .dropbtn {
         text-align: left;
         padding: 5px 10px;
     }
