@@ -12,7 +12,7 @@
             </defs>
             <rect  x="0" y="0" rx="20" ry="20" width="100%" height="100%"  fill="url(#grad1)" />
             <text fill="#ebc65f" font-size="7vh" font-family="Lato" x="3%" y="75%">Galeria</text>
-            Galeria
+
         </svg>
         <noscript class="gallery">
             <a href="<?php echo $basePath ?>/assets/img/kb1.jpg">
