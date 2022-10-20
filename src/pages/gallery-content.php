@@ -60,7 +60,7 @@
         </div>
         <div id="modal" class="modal">
             <span class="close" onclick="closeModal()">&times;</span>
-            <img class="modal-content" id="modal-img">
+            <img class="modal-content" id="modal-img" src="<?php echo $basePath?>/assets/logo.jpg" alt="modal">
         </div>
     </section>
 </section>
