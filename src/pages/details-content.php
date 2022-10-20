@@ -130,11 +130,12 @@
                     <input type="radio" name="switchType" id="clicky">
                 </fieldset>
                 <span><label for="switch">Model przełącznika:</label><input class="poll-input" id="switch" required></span>
-                <span><label for="color">Kolor przewodni:</label><input class="poll-input" id="color" type="color" required></span>
+                <span><label for="color">Kolor przewodni:</label><input class="poll-input" id="color" type="color"></span>
                 <span><label for="rgb">Podświetlenie RGB? </label><input type="checkbox" id="rgb"></span>
                 <span><label for="photo">Zdjęcie: </label><input class="poll-input" type="file" id="photo"></span>
                 <span><label for="priority">Co jest dla ciebie najważniejsze:
                     <select id="priority" class="poll-input"  name="priority" required>
+                        <option value="">Wybierz...</option>
                         <option value="price">Cena</option>
                         <option value="look">Wygląd</option>
                         <option value="comfort">Komfort</option>

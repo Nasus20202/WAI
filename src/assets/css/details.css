@@ -137,3 +137,7 @@ form span {
     pointer-events: none !important;
     display: none !important;
 }
+
+#poll:hover {
+    transform: none;
+}
