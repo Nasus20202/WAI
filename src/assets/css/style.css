@@ -87,7 +87,7 @@ a {
     transition: 0.7s;
     overflow: hidden;
     display: inline-block;
-    background-color: var(--white-0);
+    background-color: #fcfcfc;
 }
 
 .card:hover {
@@ -166,6 +166,7 @@ button:hover {
 
 .dark .card {
     border: #a3873a 1px solid;
+    background-color: #2c2c2c;
 }
 
 .dropdown-link {
