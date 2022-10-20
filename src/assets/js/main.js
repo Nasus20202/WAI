@@ -1,6 +1,5 @@
-"use strict";
-addEventListener('scroll', (event) => {
-    let stickyNavbar = document.getElementById('sticky-navbar');
+addEventListener('scroll', function (event) {
+    var stickyNavbar = document.getElementById('sticky-navbar');
     if (stickyNavbar == null)
         return;
     if (window.scrollY > 0) {
@@ -11,7 +10,7 @@ addEventListener('scroll', (event) => {
     }
 });
 function toggleTheme() {
-    let theme = localStorage.getItem('theme');
+    var theme = localStorage.getItem('theme');
     if (theme == null || theme == 'light') {
         localStorage.setItem('theme', 'dark');
     }
@@ -21,11 +20,11 @@ function toggleTheme() {
     updateTheme();
 }
 function updateTheme() {
-    let body = document.getElementsByTagName('body')[0];
-    let themeToggler = document.getElementById('theme-toggler');
+    var body = document.getElementsByTagName('body')[0];
+    var themeToggler = document.getElementById('theme-toggler');
     if (themeToggler == null || body == null)
         return;
-    let theme = localStorage.getItem('theme');
+    var theme = localStorage.getItem('theme');
     if (theme == null || theme == 'light') {
         body.classList.remove('dark');
         localStorage.setItem('theme', 'light');
