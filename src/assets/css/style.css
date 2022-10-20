@@ -188,12 +188,10 @@ button:hover {
         text-align: left;
         padding: 5px 10px;
     }
-    .nav {
-        padding: auto;
-    }
+
     .card-img {
         width: 100%;
-        border-radius: 7;
+        border-radius: 7px;
     }
     .card-img:hover {
         transform: scale(1.05);
