@@ -133,7 +133,7 @@
                 <span><label for="color">Kolor przewodni:</label><input class="poll-input" id="color" type="color"></span>
                 <span><label for="rgb">Podświetlenie RGB? </label><input type="checkbox" id="rgb"></span>
                 <span><label for="photo">Zdjęcie: </label><input class="poll-input" type="file" id="photo"></span>
-                <span><label for="priority">Co jest dla ciebie najważniejsze:
+                <span><label for="priority">Co jest dla ciebie najważniejsze:</label>
                     <select id="priority" class="poll-input"  name="priority" required>
                         <option value="">Wybierz...</option>
                         <option value="price">Cena</option>
@@ -154,6 +154,6 @@
 <a id="poll-link" href="#poll">Ankieta</a>
 <div id="modal" class="modal">
         <span class="close" onclick="closeModal()">&times;</span>
-        <img class="modal-content" id="modal-img">
+        <img class="modal-content" id="modal-img" src="<?php echo $basePath?>/assets/logo.jpg" alt="modal">
 </div>
 
