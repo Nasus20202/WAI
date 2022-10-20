@@ -1,7 +1,6 @@
 <script src="<?php echo $basePath ?>/assets/js/gallery.js"></script>
 <link rel="stylesheet" href="<?php echo $basePath ?>/assets/css/gallery.css">
-<section>
-    <section>
+<div>
         <svg id="logo" height="10vh" width="100%">
             <defs>
                 <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -62,5 +61,4 @@
             <span class="close" onclick="closeModal()">&times;</span>
             <img class="modal-content" id="modal-img" src="<?php echo $basePath?>/assets/logo.jpg" alt="modal">
         </div>
-    </section>
-</section>
+</div>
