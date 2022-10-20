@@ -41,6 +41,17 @@ td {
     width: 80%;
 }
 
+#poll-link{
+    font-size: 1.2em;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    background-color: var(--white-2);
+    padding: 0.3rem;
+    border-radius: 10px 0 0 0;
+}
+
 @media only screen and (max-width: 600px) {
     #teardown {
         width: 100%;
@@ -52,6 +63,11 @@ td {
     .layouts-elem-img {
         flex: 0 0 auto;
         width: 100%;
+    }
+    #poll-link{
+        font-size: 1.1em;
+        padding: 0.1rem;
+        border-radius: 5px 0 0 0;
     }
 }
 

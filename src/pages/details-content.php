@@ -115,8 +115,10 @@
             </form>
         </div>
     </article>
-    <div id="modal" class="modal">
+</section>
+<a id="poll-link" href="#poll">Ankieta</a>
+<div id="modal" class="modal">
         <span class="close" onclick="closeModal()">&times;</span>
         <img class="modal-content" id="modal-img">
-    </div>
-</section>
+</div>
+

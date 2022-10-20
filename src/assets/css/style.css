@@ -13,6 +13,9 @@ body {
     font-family: Lato, Calibri, Tahoma, 'Calibri Light', Verdana, Geneva, sans-serif;
     font-size: 1.3em;
     color: var(--black-2);
+}
+
+html {
     scroll-behavior: smooth;
 }
 
