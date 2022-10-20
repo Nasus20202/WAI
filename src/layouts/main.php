@@ -36,5 +36,8 @@
           <?php include $content ?>
       </main>
     </div>
+    <footer>
+        2022 &copy; Krzysztof Nasuta
+      </footer>
   </body>
 </html>

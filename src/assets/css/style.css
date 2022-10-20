@@ -46,6 +46,17 @@ nav.pinned {
     transition-duration: 0.5s;
 }
 
+footer {
+    font-size: 0.8rem;
+    text-align: center;
+    background-color: var(--white-1);
+    padding: 5px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+
 header {
     transition: all 1s, background-color 1ms, color 1ms;
     background-color: var(--white-0);

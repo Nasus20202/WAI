@@ -39,7 +39,7 @@ nav {
     margin-bottom: 10px;
 }
 .content {
-    min-height: 60vh;
+    margin-bottom: 35px;
 }
 
 #sticky-navbar {
