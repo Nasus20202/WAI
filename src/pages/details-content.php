@@ -130,6 +130,7 @@
                     <input type="radio" name="switchType" id="clicky">
                 </fieldset>
                 <span><label for="switch">Model przełącznika:</label><input class="poll-input" id="switch" required></span>
+                <span><label for="keycaps">Keycapy:</label><input class="poll-input" id="keycaps" required></span>
                 <span><label for="color">Kolor przewodni:</label><input class="poll-input" id="color" type="color"></span>
                 <span><label for="rgb">Podświetlenie RGB? </label><input type="checkbox" id="rgb"></span>
                 <span><label for="photo">Zdjęcie: </label><input class="poll-input" type="file" id="photo"></span>
