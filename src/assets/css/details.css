@@ -24,6 +24,7 @@ td {
 } 
 #poll-img{
     width: 40%;
+    transform: none;
 }
 
 form {
