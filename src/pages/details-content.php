@@ -11,9 +11,9 @@
         <div class="card-content">
             <h4 style="margin: 10px 0">Elementy klawiatury mechanicznej</h4>
             <ul>
-                <li><b>Klawisze</b> (Keycaps) - Plastikowe elementy służące do aktywacji przełącznika</li>
-                <li><b>Przełączniki</b> (Switches) - Wykrywają kliknięcia i przesyłają je do PCB</li>
-                <li><b>Obudowa</b> (Case) - Łączy pozostałe elementy w całość. Może składać się z części górnej i dolnej.</li>
+                <li><b><a style="text-decoration: underline;" href="#layouts">Klawisze</a></b> (Keycaps) - Plastikowe elementy służące do aktywacji przełącznika</li>
+                <li><b><a style="text-decoration: underline;" href="#switches">Przełączniki</a></b> (Switches) - Wykrywają kliknięcia i przesyłają je do PCB</li>
+                <li><b><a style="text-decoration: underline;" href="#layouts">Obudowa</a></b> (Case) - Łączy pozostałe elementy w całość. Może składać się z części górnej i dolnej.</li>
                 <li><b>Gaskets</b> - Zwiększają miękkość klawiatury.</li>
                 <li><b>Plate</b> - Wyrównuje i stabilizuje przełączniki</li>
                 <li><b>Płytka drukowana</b> (PCB) - Konwertuje naciśnięcia klawiszy na sygnały elektryczne i wysyła je do komputera. Może zawierać diody RGB do podświetlenia.</li>
