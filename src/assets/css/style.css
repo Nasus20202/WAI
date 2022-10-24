@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
 :root {
     --white-0: #F8FDEF;
     --white-1: #E8EDDF;
     --white-2: #CFDBD5;
-    --yellow-0:  #F5CB5C;
+    --yellow-0: #F5CB5C;
     --yellow-1: #dbb64f;
     --black-1: #333533;
     --black-2: #242423;
@@ -28,10 +29,11 @@ nav {
 }
 
 nav.pinned {
-    box-shadow: 0 0 10px 0 rgba(0,0,0,0.32);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.32);
 }
 
-.navitem, .dropbtn {
+.navitem,
+.dropbtn {
     width: 100%;
     padding: 10px 0;
     text-align: center;
@@ -40,10 +42,11 @@ nav.pinned {
     border-radius: 5px;
 }
 
-.navitem:hover, .dropbtn:hover {
+.navitem:hover,
+.dropbtn:hover {
     background-color: var(--yellow-0);
     color: inherit;
-    box-shadow: 0 0 15px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
 }
 
 #sticky-navbar {
@@ -66,6 +69,7 @@ header {
     background-color: var(--white-0);
     padding-top: 10px;
 }
+
 header:hover {
     transform: scale(1.02);
 }
@@ -91,13 +95,14 @@ a {
 }
 
 .card:hover {
-    box-shadow: 0 0 15px 0 rgba(0,0,0,0.3);
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.3);
     transform: scale(1.015);
-  }
+}
 
 .card-img {
     transition: 1s;
 }
+
 .card-img:hover {
     transform: scale(1.1);
 }
@@ -120,7 +125,7 @@ button {
 button:hover {
     transform: scale(1.07);
     border-color: var(--yellow-0);
-    box-shadow: 0 0 10px 0 rgba(0,0,0,0.25);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.25);
 }
 
 #theme-toggler {
@@ -131,7 +136,7 @@ button:hover {
     padding: 10px;
     border-radius: 50px;
     background-color: var(--white-1);
-    box-shadow: 0 0 10px 0 rgba(0,0,0,0.25);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.25);
     transition-duration: 0.5s;
     z-index: 1;
 }
@@ -141,7 +146,7 @@ button:hover {
     --white-0: #242423;
     --white-1: #333533;
     --white-2: #444;
-    --yellow-0:  #F5CB5C;
+    --yellow-0: #F5CB5C;
     --yellow-1: #dbb64f;
     --black-1: #E8EDDF;
     --black-2: #F8FDEF;
@@ -151,16 +156,19 @@ button:hover {
 .dark header {
     background-color: var(--white-2);
 }
+
 .dark .currentNav {
     background-color: var(--white-0);
     color: var(--yellow-0);
 }
 
-.dark .navitem:hover, .dark .dropbtn:hover {
+.dark .navitem:hover,
+.dark .dropbtn:hover {
     color: var(--white-0);
 }
 
-.dark .navitem:hover, .dark .dropbtn:hover {
+.dark .navitem:hover,
+.dark .dropbtn:hover {
     background-color: var(--yellow-0);
 }
 
@@ -179,12 +187,12 @@ button:hover {
     color: var(--yellow-0);
 }
 
-@media only screen and (max-width: 1000px) {
-
-}
+@media only screen and (max-width: 1000px) {}
 
 @media only screen and (max-width: 600px) {
-    .navitem, .dropbtn {
+
+    .navitem,
+    .dropbtn {
         text-align: left;
         padding: 5px 10px;
     }
@@ -193,13 +201,14 @@ button:hover {
         width: 100%;
         border-radius: 7px;
     }
+
     .card-img:hover {
         transform: scale(1.05);
     }
+
     .dropdown-link {
         margin: 5px;
         border-radius: 5px;
         font-size: 1.1rem;
     }
 }
-

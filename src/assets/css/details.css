@@ -9,20 +9,23 @@ th {
     border-bottom: 2px solid;
     padding: 5px;
 }
+
 td {
     border-bottom: 1px solid;
     padding: 0 5px;
 }
 
-.tableContainer{
+.tableContainer {
     padding-bottom: 10px;
     overflow-x: auto;
 }
+
 #teardown {
     width: 50%;
     object-fit: contain;
-} 
-#poll-img{
+}
+
+#poll-img {
     width: 40%;
     transform: none;
 }
@@ -35,7 +38,8 @@ form {
 .no-zoom:hover {
     transform: none;
 }
-#card-content-layouts{
+
+#card-content-layouts {
     display: grid;
     grid-template-columns: 5fr 7fr;
     grid-auto-rows: 1fr;
@@ -50,7 +54,7 @@ form {
     width: 80%;
 }
 
-#poll-link{
+#poll-link {
     font-size: 1.2em;
     position: fixed;
     right: 0;
@@ -62,32 +66,40 @@ form {
 }
 
 @media only screen and (max-width: 600px) {
-    #teardown, #poll-img {
+
+    #teardown,
+    #poll-img {
         width: 100%;
     }
-    #card-content-layouts{
+
+    #card-content-layouts {
         display: flex;
         flex-direction: column;
     }
+
     .layouts-elem-img {
         flex: 0 0 auto;
         width: 100%;
     }
-    #poll-link{
+
+    #poll-link {
         font-size: 1.1em;
         padding: 0.1rem;
         border-radius: 5px 0 0 0;
     }
 }
-#form-btn-container{
+
+#form-btn-container {
     display: flex;
     justify-content: center;
     margin-top: 1rem;
 }
-#form-btn-container button{
+
+#form-btn-container button {
     width: 100%;
     margin-left: 1rem;
 }
+
 form {
     display: flex;
     flex-direction: column;
@@ -98,10 +110,12 @@ form {
     #elements {
         flex-direction: column-reverse;
     }
+
     #teardown {
         width: 100%;
     }
 }
+
 form span {
     margin-top: 2px;
     margin-bottom: 2px;
@@ -114,26 +128,31 @@ form span {
     border: none;
     margin-left: 10px;
 }
-.poll-input:focus{
+
+.poll-input:focus {
     outline: 1px solid var(--yellow-0);
 }
+
 .dark .poll-input {
     color: var(--yellow-0);
 }
 
-.ui-checkboxradio-label{
+.ui-checkboxradio-label {
     color: var(--black-0) !important;
     background-color: var(--white-0) !important;
     font-family: Lato, Calibri, Tahoma, 'Calibri Light', Verdana, Geneva, sans-serif !important;
 }
-.ui-checkboxradio-label:active{
+
+.ui-checkboxradio-label:active {
     border: initial !important;
 }
+
 .ui-state-active {
     background: var(--yellow-1) !important;
     color: black !important;
     border: none !important;
 }
+
 .ui-checkboxradio-icon {
     pointer-events: none !important;
     display: none !important;

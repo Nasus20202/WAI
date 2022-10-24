@@ -15,7 +15,7 @@
     text-align: center;
 }
 
-#history-title{
+#history-title {
     font-size: 1.3em;
     font-weight: bold;
 }
@@ -56,7 +56,8 @@ button {
 
 .correct {
     color: var(--black-1);
-} 
+}
+
 .incorrect {
     color: red;
     font-weight: bold;
@@ -79,7 +80,7 @@ button {
     background-color: var(--yellow-0);
 }
 
-#word-count-container{
+#word-count-container {
     width: 20%;
     margin-top: 20px;
     display: flex;
@@ -98,32 +99,36 @@ button {
     border: none;
     margin-left: 10px;
 }
-#word-count:focus{
+
+#word-count:focus {
     outline: 1px solid var(--yellow-0);
 }
+
 .dark #word-count {
     color: var(--yellow-0);
 }
 
 
-@media screen and (max-width: 1000px) {
-
-}
+@media screen and (max-width: 1000px) {}
 
 @media screen and (max-width: 600px) {
     #typing-stats {
         flex-direction: column;
     }
+
     #result-stats {
         flex-direction: column;
     }
+
     .result-stat {
         font-size: 1.5em;
     }
-    #word-count-container{
+
+    #word-count-container {
         width: 100%;
         text-align: center;
     }
+
     #newtestbtn {
         width: 80%;
         margin: 0;
