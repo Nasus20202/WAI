@@ -116,10 +116,10 @@
         <div class="card-content">
             <h4 style="margin: 10px 0">Ankieta</h4>
             <form action="/poll" method="POST">
-                <span><label for="age">Twój wiek:</label><input type="number" class="poll-input" name="age" title="Wiek jest daną jedynie statystyczną" required></span>
-                <span><label for="keyboard">Twoja klawiatura:</label><input class="poll-input" name="keyboard" required></span>
-                <span><label for="custom">Custom? </label><input type="checkbox" name="custom"></span>
-                <span><label for="budget">Budżet:</label><input class="poll-input" type="number" name="budget" required> zł</span>
+                <span><label for="age">Twój wiek:</label><input type="number" class="poll-input" id="age" name="age" title="Wiek jest daną jedynie statystyczną" required></span>
+                <span><label for="keyboard">Twoja klawiatura:</label><input class="poll-input" id="keyboard" name="keyboard" required></span>
+                <span><label for="custom">Custom? </label><input type="checkbox" id="custom" name="custom"></span>
+                <span><label for="budget">Budżet:</label><input class="poll-input" type="number" id="budget" name="budget" required> zł</span>
                 <fieldset>
                     <legend>Rodzaj przełącznika</legend>
                     <label for="linear">Linear</label>
@@ -127,13 +127,13 @@
                     <label for="tactile">Tactile</label>
                     <input type="radio" name="switchType" id="tactile" value="tactile">
                     <label for="clicky">Clicky</label>
-                    <input type="radio" name="switchType"id="clicky" value="clicky">
+                    <input type="radio" name="switchType" id="clicky" value="clicky">
                 </fieldset>
-                <span><label for="switch">Model przełącznika:</label><input class="poll-input" name="switch" required></span>
-                <span><label for="keycaps">Keycapy:</label><input class="poll-input" name="keycaps" required></span>
-                <span><label for="color">Kolor przewodni:</label><input class="poll-input" name="color" type="color"></span>
-                <span><label for="rgb">Podświetlenie RGB? </label><input type="checkbox" name="rgb"></span>
-                <span><label for="photo">Zdjęcie: </label><input accept="image/*" class="poll-input" type="file" name="photo"></span>
+                <span><label for="switch">Model przełącznika:</label><input class="poll-input" id="switch" name="switch" required></span>
+                <span><label for="keycaps">Keycapy:</label><input class="poll-input" id="keycaps" name="keycaps" required></span>
+                <span><label for="color">Kolor przewodni:</label><input class="poll-input" id="color" name="color" type="color"></span>
+                <span><label for="rgb">Podświetlenie RGB? </label><input type="checkbox" id="rgb" name="rgb"></span>
+                <span><label for="photo">Zdjęcie: </label><input accept="image/*" class="poll-input" id="photo" type="file" name="photo"></span>
                 <span><label for="priority">Co jest dla ciebie najważniejsze:</label>
                     <select id="priority" class="poll-input" name="priority" required>
                         <option value="">Wybierz...</option>
@@ -143,7 +143,7 @@
                         <option value="sound">Dźwięk</option>
                     </select>
                 </span>
-                <span><label for="email">Email:</label><input class="poll-input" name="email" title="Pole nieobowiązkowe" type="email"></span>
+                <span><label for="email">Email:</label><input class="poll-input" id="email" name="email" title="Pole nieobowiązkowe" type="email"></span>
                 <div id="form-btn-container">
                     <button type="submit">Wyślij</button>
                     <button type="reset">Reset</button>
