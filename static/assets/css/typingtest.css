@@ -1,0 +1,136 @@
+#typing {
+    margin: 20px 0;
+    color: #727272;
+    white-space: pre-wrap;
+    font-size: 1.5em;
+}
+
+#typing-stats {
+    display: flex;
+    justify-content: space-around;
+}
+
+#history {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#history-title {
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+.stat {
+    flex: 1;
+    text-align: center;
+}
+
+#result-stats {
+    display: flex;
+    justify-content: space-around;
+}
+
+.result-stat {
+    flex: 1;
+    text-align: center;
+    font-size: larger;
+    font-size: 2em;
+}
+
+
+.hidden {
+    display: none;
+}
+
+button {
+    font-size: 1.5em;
+    margin-top: 20px;
+    margin-left: 10%;
+    width: 80%;
+    transition-duration: 0.5s;
+}
+
+#record {
+    font-weight: normal;
+}
+
+.correct {
+    color: var(--black-1);
+}
+
+.incorrect {
+    color: red;
+    font-weight: bold;
+}
+
+#progressbar {
+    margin-top: 30px;
+    width: 80%;
+    height: 10px;
+    margin-left: 10%;
+    background-color: var(--black-1);
+    border-radius: 10px;
+}
+
+#progressbar::-moz-progress-bar {
+    background-color: var(--yellow-0);
+}
+
+#progressbar::-webkit-progress-value {
+    background-color: var(--yellow-0);
+}
+
+#word-count-container {
+    width: 20%;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#newtestbtn {
+    width: 60%;
+}
+
+#word-count {
+    background-color: var(--white-1);
+    border-radius: 5px;
+    font-size: large;
+    border: none;
+    margin-left: 10px;
+}
+
+#word-count:focus {
+    outline: 1px solid var(--yellow-0);
+}
+
+.dark #word-count {
+    color: var(--yellow-0);
+}
+
+
+@media screen and (max-width: 1000px) {}
+
+@media screen and (max-width: 600px) {
+    #typing-stats {
+        flex-direction: column;
+    }
+
+    #result-stats {
+        flex-direction: column;
+    }
+
+    .result-stat {
+        font-size: 1.5em;
+    }
+
+    #word-count-container {
+        width: 100%;
+        text-align: center;
+    }
+
+    #newtestbtn {
+        width: 80%;
+        margin: 0;
+    }
+}

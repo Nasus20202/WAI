@@ -1,0 +1,226 @@
+body {
+    scroll-behavior: smooth;
+    margin: 0px;
+    overflow-anchor: none;
+}
+
+nav {
+    display: grid;
+    /*overflow: hidden;*/
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 2rem;
+}
+
+.navitem,
+.dropbtn {
+    font-size: 1.8vw;
+}
+
+
+.image {
+    max-width: 100%;
+    height: auto;
+}
+
+.logo {
+    margin-left: 10px;
+    max-height: 10vh;
+
+}
+
+.title {
+    max-width: 70vw;
+    font-size: 10vh;
+    margin: 0 auto;
+}
+
+.container {
+    max-width: 80vw;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    margin-bottom: 10px;
+}
+
+.content {
+    margin-bottom: 35px;
+}
+
+#sticky-navbar {
+    position: sticky;
+    top: 0;
+    right: 0;
+}
+
+#sticky-navbar.pinned {
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+.pinned .navitem,
+.pinned .dropbtn {
+    font-size: 1.7vw;
+    padding: 5px 0;
+}
+
+header {
+    text-align: center;
+}
+
+.card {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-img {
+    object-fit: cover;
+    flex: 0 0 auto;
+    width: 20%;
+}
+
+@media only screen and (max-width: 1400px) {
+    .card-img {
+        object-fit: cover;
+        flex: 0 0 auto;
+        width: 27%;
+    }
+}
+
+.card-right .card-img {
+    border-radius: 0 7px 7px 0;
+}
+
+.card-left .card-img {
+    border-radius: 7px 0 0 7px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--yellow-1);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    width: 100%;
+    z-index: 1;
+    transition-duration: 1s;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+@media only screen and (max-width: 1000px) {
+    nav {
+        column-gap: normal;
+    }
+
+    .container {
+        max-width: 95vw;
+        margin-left: 2.5vw;
+        margin-right: 2.5vw;
+    }
+
+    .navitem,
+    .dropbtn {
+        font-size: 3.5vw;
+    }
+
+    .pinned .navitem,
+    .pinned .dropbtn {
+        font-size: 3vw;
+    }
+
+    .card-img {
+        width: 35%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        max-width: 98vw;
+        margin-left: 1vw;
+        margin-right: 1vw;
+    }
+
+    nav {
+        grid-template-columns: 1fr;
+    }
+
+    .navitem,
+    .dropbtn {
+        font-size: 3vh;
+    }
+
+    .pinned .navitem,
+    .pinned .dropbtn {
+        font-size: 3vh;
+        padding: 5px 10px;
+    }
+
+    .logo {
+        max-width: 7vh;
+        position: sticky;
+    }
+
+    .title {
+        font-size: 15vw;
+    }
+
+    header {
+        text-align: inherit;
+    }
+
+    #sticky-navbar {
+        position: inherit;
+        padding: 1vh !important;
+    }
+
+    #sticky-navbar.pinned {
+        margin-bottom: 10px;
+    }
+
+    .card-img {
+        width: 100%;
+    }
+
+    .card-right {
+        flex-direction: column-reverse;
+    }
+
+    .card-left {
+        flex-direction: column;
+    }
+
+    .card {
+        flex-direction: column;
+    }
+
+    .card-img {
+        border-radius: 7px 7px 0 0;
+    }
+
+    .row {
+        flex-direction: column;
+        align-items: center;
+    }
+}

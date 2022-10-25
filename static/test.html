@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="icon" href="assets/img/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#F5CB5C">
+  <meta name="keywords" content="keebee, klawiatury">
+  <meta name="author" content="Krzysztof Nasuta">
+  <meta name="description" content="Keebee">
+  <title>Keebee - Test pisania</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <noscript>
+    <link rel="stylesheet" href="assets/css/noscript.css">
+    <style>
+      .ns-hide {
+        display: none;
+      }
+    </style>
+  </noscript>
+  <script src="assets/js/main.js"></script>
+</head>
+
+<body>
+  <div id="theme-toggler" onclick="toggleTheme()"></div>
+  <header>
+    <div class="center">
+      <img src="assets/img/logo.png" class="image logo" alt="keebee logo">
+      <span class="title">Keebee</span>
+    </div>
+  </header>
+  <div class="container">
+    <nav id="sticky-navbar">
+      <a id="navlink0" href="index.html" class="navitem">Klawiatury</a>
+      <div class="dropdown">
+        <div class="dropbtn">Szczegóły</div>
+        <div class="dropdown-content">
+          <a class="dropdown-link" href="details.html">Informacje</a>
+          <a class="dropdown-link" href="details.html#poll">Ankieta</a>
+          <a class="dropdown-link" href="https://shop.knasuta.me/s/peryferia/klawiatury" target="_blank">Sklep</a>
+          <a class="dropdown-link" href="https://knasuta.me" target="_blank">Autor</a>
+        </div>
+      </div>
+      <a id="navlink2" href="gallery.html" class="navitem">Galeria</a>
+      <a id="navlink3" href="test.html" class="navitem currentNav">Test pisania</a>
+    </nav>
+    <main class="content">
+      <script src="assets/js/typingtest.js"></script>
+      <link rel="stylesheet" href="assets/css/typingtest.css">
+      <section id="test">
+        <h3>Test pisania</h3>
+        <div id="typing">
+
+        </div>
+        <div id="typing-stats">
+          <div class="stat">Progres: <span id="progress">0</span>%</div>
+          <div class="stat">Szybkość: <span id="wpm">0</span> WPM</div>
+          <div class="stat">Czas: <span id="time">0</span> s</div>
+          <div class="stat">Poprawność: <span id="accuracy">0</span>%</div>
+        </div>
+        <progress id="progressbar" value="0" max="100"></progress>
+        <button onclick="showResult()">Wyniki</button>
+      </section>
+      <section id="result" class="hidden">
+        <h3>Wyniki <span id="record"></span></h3>
+        <div id="result-stats">
+          <div class="result-stat hidden">Szybkość: <span id="result-wpm">0</span> WPM</div>
+          <div class="result-stat hidden">Poprawność: <span id="result-accuracy">0</span>%</div>
+        </div>
+        <div class="row">
+          <button id="newtestbtn" onclick="showTest()">Rozpocznij test</button>
+          <div id="word-count-container">
+            Ilość słów:
+            <input type="text" id="word-count" value="30" placeholder="10-1000">
+          </div>
+        </div>
+        <div id="history">
+
+        </div>
+      </section>
+    </main>
+  </div>
+  <footer>
+    2022 &copy; <a href="https://knasuta.me" target="_blank">Krzysztof Nasuta</a>
+  </footer>
+</body>
+
+</html>

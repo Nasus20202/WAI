@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="icon" href="assets/img/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#F5CB5C">
+  <meta name="keywords" content="keebee, klawiatury">
+  <meta name="author" content="Krzysztof Nasuta">
+  <meta name="description" content="Keebee">
+  <title>Keebee - Galeria</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <script src="assets/js/gallery.js"></script>
+  <link rel="stylesheet" href="assets/css/gallery.css">
+  <noscript>
+    <link rel="stylesheet" href="assets/css/noscript.css">
+    <style>
+      .ns-hide {
+        display: none;
+      }
+    </style>
+  </noscript>
+  <script src="assets/js/main.js"></script>
+</head>
+
+<body>
+  <div id="theme-toggler" onclick="toggleTheme()"></div>
+  <header>
+    <div class="center">
+      <img src="assets/img/logo.png" class="image logo" alt="keebee logo">
+      <span class="title">Keebee</span>
+    </div>
+  </header>
+  <div class="container">
+    <nav id="sticky-navbar">
+      <a id="navlink0" href="index.html" class="navitem">Klawiatury</a>
+      <div class="dropdown">
+        <div class="dropbtn">Szczegóły</div>
+        <div class="dropdown-content">
+          <a class="dropdown-link" href="details.html">Informacje</a>
+          <a class="dropdown-link" href="details.html#poll">Ankieta</a>
+          <a class="dropdown-link" href="https://shop.knasuta.me/s/peryferia/klawiatury" target="_blank">Sklep</a>
+          <a class="dropdown-link" href="https://knasuta.me" target="_blank">Autor</a>
+        </div>
+      </div>
+      <a id="navlink2" href="gallery.html" class="navitem currentNav">Galeria</a>
+      <a id="navlink3" href="test.html" class="navitem">Test pisania</a>
+    </nav>
+    <main class="content">
+      <div>
+        <svg id="logo" style="height: 10vh; width: 100%">
+          <defs>
+            <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" style="stop-color:rgb(36,36,35);stop-opacity:1" />
+              <stop offset="60%" style="stop-color:rgb(219,182,79);stop-opacity:2" />
+              <stop offset="100%" style="stop-color:rgb(245,203,92);stop-opacity:2" />
+            </linearGradient>
+          </defs>
+          <rect x="0" y="0" rx="20" ry="20" width="100%" height="100%" fill="url(#grad1)" />
+          <text fill="#ebc65f" font-size="7vh" font-family="Lato" x="3%" y="75%">Galeria</text>
+
+        </svg>
+        <noscript class="gallery">
+          <a href="assets/img/kb1.jpg">
+            <img class="gallery-photo" src="assets/img/kb0-min.jpg" alt="Klawiatura">
+          </a>
+          <a href="assets/img/kb1.jpg">
+            <img class="gallery-photo" src="assets/img/kb1-min.jpg" alt="Klawiatura">
+          </a>
+          <a href="assets/img/kb2.jpg">
+            <img class="gallery-photo" src="assets/img/kb2-min.jpg" alt="Klawiatura">
+          </a>
+          <a href="assets/img/kb3.jpg">
+            <img class="gallery-photo" src="assets/img/kb3-min.jpg" alt="Klawiatura">
+          </a>
+          <a href="assets/img/kb4.jpg">
+            <img class="gallery-photo" src="assets/img/kb4-min.jpg" alt="Klawiatura">
+          </a>
+          <a href="assets/img/kb5.jpg">
+            <img class="gallery-photo" src="assets/img/kb5-min.jpg" alt="Klawiatura">
+          </a>
+          <a href="assets/img/kb6.jpg">
+            <img class="gallery-photo" src="assets/img/kb6-min.jpg" alt="Klawiatura">
+          </a>
+          <a href="assets/img/kb7.jpg">
+            <img class="gallery-photo" src="assets/img/kb7-min.jpg" alt="Klawiatura">
+          </a>
+          <a href="assets/img/kb8.jpg">
+            <img class="gallery-photo" src="assets/img/kb8-min.jpg" alt="Klawiatura">
+          </a>
+          <a href="assets/img/kb9.jpg">
+            <img class="gallery-photo" src="assets/img/kb9-min.jpg" alt="Klawiatura">
+          </a>
+        </noscript>
+        <div class="gallery ns-hide" id="js-gallery">
+          <img class="gallery-photo" src="assets/img/kb0-min.jpg" alt="Klawiatura"
+            onclick='showPhoto("assets/img/kb0.jpg")'>
+          <img class="gallery-photo" src="assets/img/kb1-min.jpg" alt="Klawiatura"
+            onclick='showPhoto("assets/img/kb1.jpg")'>
+          <img class="gallery-photo" src="assets/img/kb2-min.jpg" alt="Klawiatura"
+            onclick='showPhoto("assets/img/kb2.jpg")'>
+          <img class="gallery-photo" src="assets/img/kb3-min.jpg" alt="Klawiatura"
+            onclick='showPhoto("assets/img/kb3.jpg")'>
+          <img class="gallery-photo" src="assets/img/kb4-min.jpg" alt="Klawiatura"
+            onclick='showPhoto("assets/img/kb4.jpg")'>
+          <img class="gallery-photo" src="assets/img/kb5-min.jpg" alt="Klawiatura"
+            onclick='showPhoto("assets/img/kb5.jpg")'>
+          <img class="gallery-photo" src="assets/img/kb6-min.jpg" alt="Klawiatura"
+            onclick='showPhoto("assets/img/kb6.jpg")'>
+          <img class="gallery-photo" src="assets/img/kb7-min.jpg" alt="Klawiatura"
+            onclick='showPhoto("assets/img/kb7.jpg")'>
+          <img class="gallery-photo" src="assets/img/kb8-min.jpg" alt="Klawiatura"
+            onclick='showPhoto("assets/img/kb8.jpg")'>
+          <img class="gallery-photo" src="assets/img/kb9-min.jpg" alt="Klawiatura"
+            onclick='showPhoto("assets/img/kb9.jpg")'>
+        </div>
+        <div id="modal" class="modal">
+          <span class="close" onclick="closeModal()">&times;</span>
+          <img class="modal-content" id="modal-img" src="assets/img/logo.png" alt="modal">
+        </div>
+      </div>
+    </main>
+  </div>
+  <footer>
+    2022 &copy; <a href="https://knasuta.me" target="_blank">Krzysztof Nasuta</a>
+  </footer>
+</body>
+
+</html>
