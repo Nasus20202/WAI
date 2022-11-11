@@ -115,7 +115,7 @@
         <img class="card-img" id="poll-img" src="<?php echo $basePath ?>/assets/img/kb6-min.jpg" alt="Klawiatura">
         <div class="card-content">
             <h4 style="margin: 10px 0">Ankieta</h4>
-            <form action="/poll" method="POST">
+            <form action="/poll" method="POST" enctype="multipart/form-data">
                 <span><label for="age">Twój wiek:</label><input type="number" class="poll-input" id="age" name="age" title="Wiek jest daną jedynie statystyczną" required></span>
                 <span><label for="keyboard">Twoja klawiatura:</label><input class="poll-input" id="keyboard" name="keyboard" required></span>
                 <span><label for="custom">Custom? </label><input type="checkbox" id="custom" name="custom"></span>
